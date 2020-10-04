@@ -1,225 +1,228 @@
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <div>
-        <img src="../../../assets/Logo.png" height="50px" alt="" />
-      </div>
-      <div class="mr-auto">
-        <a class="navbar-brand" href="#" id="brand">&nbsp;Angular 10</a>
-      </div>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        style="box-shadow: none;"
-        (click)="toggleMenu()"
+  <div class="container-fluid">
+    <div>
+      <img src="../../../assets/Logo.png" height="50px" alt="" />
+    </div>
+    <div class="mr-auto">
+      <a class="navbar-brand" href="#" id="brand">&nbsp;Angular 10</a>
+    </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="box-shadow: none"
+      (click)="toggleMenu()"
+    >
+      <!-- Down Arrow Up Arrow -->
+      <!-- <i *ngIf=!isClicked class="fas fa-ellipsis-v text-white" style="font-size: 28px"></i> -->
+      <mat-icon *ngIf="!isClicked" class="text-white" style="font-size: 35px"
+        >menu</mat-icon
       >
-        <!-- Down Arrow Up Arrow -->
-        <!-- <i *ngIf=!isClicked class="fas fa-ellipsis-v text-white" style="font-size: 28px"></i> -->
-        <mat-icon *ngIf="!isClicked" class="text-white" style="font-size: 35px;"
-          >menu</mat-icon
-        >
-      <i *ngIf=isClicked class="fas fa-angle-double-up text-white" style="font-size: 30px"></i>
-        <!-- <i *ngIf=!isClicked class="fas fa-angle-double-down text-white" style="font-size: 30px"></i>
+      <i
+        *ngIf="isClicked"
+        class="fas fa-angle-double-up text-white"
+        style="font-size: 30px"
+      ></i>
+      <!-- <i *ngIf=!isClicked class="fas fa-angle-double-down text-white" style="font-size: 30px"></i>
       <i *ngIf=isClicked class="fas fa-angle-double-up text-white" style="font-size: 30px"></i> -->
-  
-        <!-- Three Dots Horizontal-Vertical -->
-        <!-- <i *ngIf=!isClicked class="fas fa-ellipsis-v text-white" style="font-size: 23px"></i>
+
+      <!-- Three Dots Horizontal-Vertical -->
+      <!-- <i *ngIf=!isClicked class="fas fa-ellipsis-v text-white" style="font-size: 23px"></i>
       <i *ngIf=isClicked class="fas fa-ellipsis-h text-white" style="font-size: 30px"></i> -->
-  
-        <!-- Menu-Menuopen -->
-        <!-- <mat-icon *ngIf="!isClicked" class="text-white" style="font-size: 35px;"
+
+      <!-- Menu-Menuopen -->
+      <!-- <mat-icon *ngIf="!isClicked" class="text-white" style="font-size: 35px;"
           >menu</mat-icon
         >
         <mat-icon *ngIf="isClicked" class="text-white" style="font-size: 35px;"
           >menu_open</mat-icon
         > -->
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"
-              ><i class="fas fa-info-circle"></i> About</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"
-              ><i class="fas fa-phone-square-alt"></i> Contact</a
-            >
-          </li>
-          <li class="nav-item dropdown">
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><i class="fas fa-info-circle"></i> About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><i class="fas fa-phone-square-alt"></i> Contact</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-fill-drip"></i> Themes
+            <i class="fas fa-caret-down text-aqua"></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            id="themedropdownmenu"
+            aria-labelledby="navbarDropdown"
+          >
             <a
-              class="nav-link"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'amber-indigo')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Amber-Indigo</a
             >
-              <i class="fas fa-fill-drip"></i> Themes
-              <i class="fas fa-caret-down text-aqua"></i>
-            </a>
-            <div
-              class="dropdown-menu dropdown-menu-right"
-              id="themedropdownmenu"
-              aria-labelledby="navbarDropdown"
-            >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'amber-indigo')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Amber-Indigo</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'blue-light-blue')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Blue-lightblue</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'bluegrey-lightgreen')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Bluegrey-Lightgreen</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'brown-amber')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Brown-Amber</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'cyan-teal')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Cyan-Teal</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'deep-orange-indigo ')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Deeporange-Indigo
-              </a>
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'deep-purple-amber')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Deeppurple-Amber</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'green-orange')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Green-Orange</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'grey-red')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Grey-Red</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'indigo-pink')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Indigo-Pink</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'light-blue-yellow')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Lightblue-Yellow</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'light-green-yellow')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Lightgreen-Yellow</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'lime-amber')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Lime-Amber</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'orange-green')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Orange-Green</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'pink-blue-grey')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Pink-Bluegrey</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'purple-green')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Purple-Green</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'red-blue')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Red-Blue</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'teal-amber')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Teal-Amber</a
-              >
-              <a
-                class="dropdown-item"
-                [routerLink]="[]"
-                (click)="onItemClick($event, 'yellow-light-blue')"
-                ><i class="fas fa-caret-right"></i> &nbsp;Yellow-Lightblue</a
-              >
-            </div>
-          </li>
-          <li class="nav-item dropdown">
             <a
-              class="nav-link"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'blue-light-blue')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Blue-lightblue</a
             >
-              <i class="fas fa-user-lock"></i>&nbsp;Access<i
-                class="fas fa-caret-down text-aqua"
-              ></i>
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'bluegrey-lightgreen')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Bluegrey-Lightgreen</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'brown-amber')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Brown-Amber</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'cyan-teal')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Cyan-Teal</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'deep-orange-indigo ')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Deeporange-Indigo
             </a>
-            <div
-              class="dropdown-menu dropdown-menu-right"
-              id="themedropdownmenu"
-              aria-labelledby="navbarDropdown"
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'deep-purple-amber')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Deeppurple-Amber</a
             >
-              <a class="dropdown-item" href="#"
-                ><i class="fas fa-cog"></i> &nbsp;Settings</a
-              >
-              <a class="dropdown-item" href="#"
-                ><i class="fas fa-sign-in-alt"></i> &nbsp;Login</a
-              >
-              <a class="dropdown-item" href="#"
-                ><i class="fas fa-user-plus"></i> &nbsp;SignUp</a
-              >
-            </div>
-          </li>
-        </ul>
-      </div>
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'green-orange')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Green-Orange</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'grey-red')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Grey-Red</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'indigo-pink')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Indigo-Pink</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'light-blue-yellow')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Lightblue-Yellow</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'light-green-yellow')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Lightgreen-Yellow</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'lime-amber')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Lime-Amber</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'orange-green')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Orange-Green</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'pink-blue-grey')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Pink-Bluegrey</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'purple-green')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Purple-Green</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'red-blue')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Red-Blue</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'teal-amber')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Teal-Amber</a
+            >
+            <a
+              class="dropdown-item"
+              [routerLink]="[]"
+              (click)="onItemClick($event, 'yellow-light-blue')"
+              ><i class="fas fa-caret-right"></i> &nbsp;Yellow-Lightblue</a
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fas fa-user-lock"></i>&nbsp;Access<i
+              class="fas fa-caret-down text-aqua"
+            ></i>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            id="themedropdownmenu"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" href="#"
+              ><i class="fas fa-cog"></i> &nbsp;Settings</a
+            >
+            <a class="dropdown-item" href="#"
+              ><i class="fas fa-sign-in-alt"></i> &nbsp;Login</a
+            >
+            <a class="dropdown-item" href="#"
+              ><i class="fas fa-user-plus"></i> &nbsp;SignUp</a
+            >
+          </div>
+        </li>
+      </ul>
     </div>
-  </nav>
-  
+  </div>
+</nav>

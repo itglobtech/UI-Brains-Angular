@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       this.selectedTheme = localStorage.getItem('theme');
     }
   }
-  
+
   gettheme(data: string) {
     localStorage.setItem('theme', data);
     console.log(localStorage.getItem('theme'));
