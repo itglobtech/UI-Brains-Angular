@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$deeppurple-amber-app-primary: mat-palette($mat-deep-purple);
+$deeppurple-amber-app-accent: mat-palette($mat-amber);
+$deeppurple-amber-app-warn: mat-palette($mat-red);
+$deep-purple-amber-app-theme: mat-light-theme(
+  $deeppurple-amber-app-primary,
+  $deeppurple-amber-app-accent,
+  $deeppurple-amber-app-warn
+);

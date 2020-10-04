@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$brown-amber-primary: mat-palette($mat-brown);
+$brown-amber-accent: mat-palette($mat-amber);
+$brown-amber-warn: mat-palette($mat-red);
+$brown-amber-app-theme: mat-light-theme(
+  $brown-amber-primary,
+  $brown-amber-accent,
+  $brown-amber-warn
+);

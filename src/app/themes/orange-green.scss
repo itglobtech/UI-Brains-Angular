@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$orange-green-primary: mat-palette($mat-orange);
+$orange-green-accent: mat-palette($mat-green);
+$orange-green-warn: mat-palette($mat-red);
+$orange-green-app-theme: mat-light-theme(
+  $orange-green-primary,
+  $orange-green-accent,
+  $orange-green-warn
+);

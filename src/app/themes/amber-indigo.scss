@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$amber-indigo-primary: mat-palette($mat-amber);
+$amber-indigo-accent: mat-palette($mat-indigo);
+$amber-indigo-warn: mat-palette($mat-red);
+$amber-indigo-app-theme: mat-light-theme(
+  $amber-indigo-primary,
+  $amber-indigo-accent,
+  $amber-indigo-warn
+);

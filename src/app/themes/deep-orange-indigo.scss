@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$deep-orange-indigo-primary: mat-palette($mat-deep-orange);
+$deep-orange-indigo-accent: mat-palette($mat-indigo);
+$deep-orange-indigo-warn: mat-palette($mat-red);
+$deep-orange-indigo-app-theme: mat-light-theme(
+  $deep-orange-indigo-primary,
+  $deep-orange-indigo-accent,
+  $deep-orange-indigo-warn
+);

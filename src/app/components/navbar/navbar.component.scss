@@ -1,0 +1,25 @@
+.mmenubtn {
+    outline: none;
+  }
+  #navbarDropdown {
+    outline: none;
+  }
+  .text-red {
+    color: red;
+  }
+  .text-aqua {
+    color: aqua;
+  }
+  
+  .navbar-brand {
+    font-family: "Courgette", Roboto;
+    font-size: 28px;
+    color: white;
+  }
+  
+  @media (max-width: 767px) {
+    .navbar-brand {
+      font-size: 24px;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$blue-light-blue-primary: mat-palette($mat-blue);
+$blue-light-blue-accent: mat-palette($mat-light-blue);
+$blue-light-blue-warn: mat-palette($mat-red);
+$blue-light-blue-app-theme: mat-light-theme(
+  $blue-light-blue-primary,
+  $blue-light-blue-accent,
+  $blue-light-blue-warn
+);

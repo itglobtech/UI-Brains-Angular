@@ -1,4 +1,10 @@
-# UIBrainsAngular
+# Implement to your new project create a project with this command
+
+ng n My-Angular-Project --skipTests=true --prefix=comp --routing=true --style=scss && cd My-Angular-Project && ng add @angular/material --defaults && npm install --save @fortawesome/fontawesome-free
+
+Note replace 'My-Angular-Project' with your project name then inside src folder of this project there is downloads folder inside 'src.zip' file is there uncompress it and replace src folder of your newly created project with this src folder and you are good to go with this starter kit but with Project name of your choice and also if you need testing feature of angular then remove '--skipTests=true' from the above command
+
+# Angular10Starter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 

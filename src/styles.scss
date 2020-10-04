@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/bootstrap.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+@import "./app/themes/amber-indigo.scss";
+@import "./app/themes/blue-light-blue.scss";
+@import "./app/themes/bluegrey-lightgreen.scss";
+@import "./app/themes/brown-amber.scss";
+@import "./app/themes/cyan-teal.scss";
+@import "./app/themes/deep-orange-indigo.scss";
+@import "./app/themes/deep-purple-amber.scss";
+@import "./app/themes/green-orange.scss";
+@import "./app/themes/grey-red.scss";
+@import "./app/themes/indigo-pink.scss";
+@import "./app/themes/light-blue-yellow.scss";
+@import "./app/themes/light-green-yellow.scss";
+@import "./app/themes/lime-amber.scss";
+@import "./app/themes/orange-green.scss";
+@import "./app/themes/pink-blue-grey.scss";
+@import "./app/themes/purple-green.scss";
+@import "./app/themes/red-blue.scss";
+@import "./app/themes/teal-amber.scss";
+@import "./app/themes/yellow-light-blue.scss";
+
+@import "./app/components/navbar/navbar-component.scss-theme.scss";
+
+@mixin custom-components-theme($theme) {
+  @include navbar-component-theme($theme);
+}
+
+/*  All Themes */
+
+.amber-indigo {
+  @include angular-material-theme($amber-indigo-app-theme);
+  @include custom-components-theme($amber-indigo-app-theme);
+}
+.blue-light-blue {
+  @include angular-material-theme($blue-light-blue-app-theme);
+  @include custom-components-theme($blue-light-blue-app-theme);
+}
+.bluegrey-lightgreen {
+  @include angular-material-theme($bluegrey-lightgreen-app-theme);
+  @include custom-components-theme($bluegrey-lightgreen-app-theme);
+}
+.brown-amber {
+  @include angular-material-theme($brown-amber-app-theme);
+  @include custom-components-theme($brown-amber-app-theme);
+}
+.cyan-teal {
+  @include angular-material-theme($cyan-teal-app-theme);
+  @include custom-components-theme($cyan-teal-app-theme);
+}
+.deep-orange-indigo {
+  @include angular-material-theme($deep-orange-indigo-app-theme);
+  @include custom-components-theme($deep-orange-indigo-app-theme);
+}
+.deep-purple-amber {
+  @include angular-material-theme($deep-purple-amber-app-theme);
+  @include custom-components-theme($deep-purple-amber-app-theme);
+}
+.green-orange {
+  @include angular-material-theme($green-orange-app-theme);
+  @include custom-components-theme($green-orange-app-theme);
+}
+.grey-red {
+  @include angular-material-theme($grey-red-app-theme);
+  @include custom-components-theme($grey-red-app-theme);
+}
+.indigo-pink {
+  @include angular-material-theme($indigo-pink-app-theme);
+  @include custom-components-theme($indigo-pink-app-theme);
+}
+.light-blue-yellow {
+  @include angular-material-theme($light-blue-yellow-app-theme);
+  @include custom-components-theme($light-blue-yellow-app-theme);
+}
+.light-green-yellow {
+  @include angular-material-theme($light-green-yellow-app-theme);
+  @include custom-components-theme($light-green-yellow-app-theme);
+}
+.lime-amber {
+  @include angular-material-theme($lime-amber-app-theme);
+  @include custom-components-theme($lime-amber-app-theme);
+}
+.orange-green {
+  @include angular-material-theme($orange-green-app-theme);
+  @include custom-components-theme($orange-green-app-theme);
+}
+.pink-blue-grey {
+  @include angular-material-theme($pink-blue-grey-app-theme);
+  @include custom-components-theme($pink-blue-grey-app-theme);
+}
+.purple-green {
+  @include angular-material-theme($purple-green-app-theme);
+  @include custom-components-theme($purple-green-app-theme);
+}
+.red-blue {
+  @include angular-material-theme($red-blue-app-theme);
+  @include custom-components-theme($red-blue-app-theme);
+}
+.teal-amber {
+  @include angular-material-theme($teal-amber-app-theme);
+  @include custom-components-theme($teal-amber-app-theme);
+}
+.yellow-light-blue {
+  @include angular-material-theme($yellow-light-blue-app-theme);
+  @include custom-components-theme($yellow-light-blue-app-theme);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

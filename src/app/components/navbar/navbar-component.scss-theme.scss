@@ -1,0 +1,51 @@
+@import "~@angular/material/theming";
+
+@mixin navbar-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  comp-navbar {
+    .active {
+      color: yellow;
+    }
+    a {
+      color: mat-color($primary, 100);
+    }
+    span {
+      color: mat-color($primary, 100);
+    }
+    .navbar-nav > .active a {
+      color: yellow;
+    }
+    .navbar-nav > .active a:hover {
+      color: aqua;
+    }
+    a:hover {
+      color: aqua;
+    }
+
+    #navbarDropdown {
+      color: mat-color($primary, 100);
+    }
+    .fa-down {
+      color: mat-color($warn);
+    }
+    #navbarDropdown:hover {
+      color: aqua;
+    }
+    .dropdown-menu {
+      background-color: mat-color($primary, 700);
+      padding: 0px;
+    }
+    .dropdown-item:hover {
+      color: mat-color($accent, 500);
+    }
+    nav {
+      color: white;
+      background-color: mat-color($primary, 900);
+    }
+  }
+}
